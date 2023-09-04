@@ -12,6 +12,10 @@ app.get("/about",(req,res)=>{
     res.send({msg:"we are ....."})
 })
 
+app.get("/contact",(req,res)=>{
+    res.send({msg:`contact me at ${process.env.MOBILE}`})
+})
+
 app.listen(PORT,()=>{
     console.log("listening on port")
 })
